@@ -1,0 +1,41 @@
+// testes de requisições rest
+@baseURL = http://localhost4000
+
+###
+//GET - Lista as Categorias
+GET {{baseURL}}/categorias
+Content-type: application/json
+
+###
+//GET - Lista categoria pelo ID
+GET {{baseURL}}/categorias/...
+Content-type: application/json
+
+###
+//GET - Lista categoria pelo nome
+GET {{baseURL}}/categorias/nome/...
+Content-type: application/json
+
+###
+//POSR - Inclui uma nova categoria
+POST {{baseURL}}/categorias
+Content-type: application/json
+{
+    "nome": "Diversos",
+    "status": true
+}
+
+###
+//PUT - Altera os dados da sua categoria
+PUT {{baseURL}}/categorias
+Content-type: application/json
+{
+    "_id": "...",
+    "nome": "Limpeza 2",
+    "status": true
+}
+
+###
+//DELETE - Apaga  a categoria pelo id
+DELETE {{baseURL}}/categorias/...
+Content-type: application/json
